@@ -1,0 +1,648 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Space+Mono&display=swap');
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#brand img{
+  width: 300px;
+  height: auto;
+}
+
+body {
+  color: white;
+  font-family: "Roboto Slab", serif;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header {
+  padding: 0 20px;
+  background-color: #1E064B;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#brand {
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+}
+
+#brand a {
+  color: #09c372;
+}
+
+ul {
+  list-style: none;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+ul a {
+  color: white;
+  font-size: 20px;
+}
+
+ul li {
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+ul li:hover {
+  transform: scale(1.1);
+  background-color: #08b2e3;
+  transition: 0.3s;
+}
+
+#login,
+#signup {
+  border-radius: 5px;
+  padding: 5px 8px;
+}
+
+#login {
+  background-color: white;
+  border: 1px solid #498afb;
+}
+
+#signup {
+  background-color: white;
+  border: 1px solid #ff3860;
+}
+
+#signup a {
+  color: #ff3860;
+}
+
+#login a {
+  color: #498afb;
+}
+
+#hamburger-icon {
+  margin: auto 0;
+  display: none;
+  cursor: pointer;
+  margin-right: 25px;
+}
+
+#hamburger-icon div {
+  width: 35px;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.open .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+
+.open .bar2 {
+  opacity: 0;
+}
+
+.open .bar3 {
+  -webkit-transform: rotate(45deg) translate(-6px, -8px);
+  transform: rotate(45deg) translate(-6px, -8px);
+}
+
+.open .mobile-menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.mobile-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  height: fit-content;
+  width: 100%;
+  background-color: #1E064B;
+}
+
+.mobile-menu li {
+  margin-bottom: 15px;
+}
+
+@media only screen and (max-width: 673px) {
+  header nav {
+    display: none;
+  }
+
+  #hamburger-icon {
+    display: block;
+  }
+}
+
+.main{
+    background-color: #279AB9;
+}
+
+.image {
+    width: 28%;
+    background-color: #BDC1EF;
+    overflow: hidden;
+    border: 5px solid white;
+    border-radius: 10%;
+    margin: 120px 50px;
+    display: inline-block;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+.image-mobile {
+    display: none;
+    width: 80%;
+    background-color: #BDC1EF;
+    overflow: hidden;
+    border: 5px solid white;
+    border-radius: 10%;
+    margin: 50px;    
+}
+
+.image-mobile img {
+    width: 100%;
+    height: auto;
+}
+
+.memberships {
+    width: 62%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.memberships h1 {
+    font-size: 4vw;
+    text-align: center;
+    margin: 2%;
+}
+
+.memberships p {
+    line-height: 200%;
+    font-size: 1.6vw;
+    text-align: right;
+}
+
+@media only screen and (max-width: 673px) {
+    .image {
+        display: none;
+
+    }
+    .image-mobile{
+        align-items: center;
+        display: inline-block;
+        width: 70%;
+        background-color: #BDC1EF;
+        overflow: hidden;
+        border: 5px solid white;
+        border-radius: 10%;
+        margin-left: 15%;
+    }
+    .memberships{
+        display: block;
+        min-width: 90%;
+        max-width: 100%;
+        position: relative;
+        top: -30px;
+    }
+    .memberships h1 {
+        width: 80%;
+        font-size: calc(2vw + 2rem);
+        text-align: center;
+        position: relative;
+        left: 15%;
+    }
+    .memberships p {
+      font-size: calc(1vw + 0.8rem);
+       max-width: 90%;
+       position: relative;
+       right: -50px;
+       padding-bottom: 20px;
+    }
+}
+
+.workplace {
+    padding-top: 15px;
+    background-color: #192BC2;
+    height: fit-content;
+    contain: content;
+}
+
+.matab-image {
+    position: relative;
+    top: 30px;
+    margin-left: 10px;
+    width: 55%;
+    overflow: hidden;
+    border: 5px solid white;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.matab-image img {
+    width: 100%;
+    height: auto;
+}
+
+.workplace-info {
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    right: -30px;
+}
+
+.workplace-info h2 {
+  text-align: right;
+  margin: 4% 2%;
+  font-size: 2vw;
+}
+
+.workplace-info p {
+  text-align: right;
+  font-size: 1.25vw;
+}
+
+#link0 {
+  color: #08b2e3;
+}
+
+#link0 a {
+  color: #F08CAE;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.bl0 {
+  padding-right: 10px;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  border-right: 5px solid #f0f7ee;
+}
+
+@media only screen and (max-width: 673px) {
+  .matab-image{
+    display: block;
+    width: 90%;
+    align-self: center;
+    position: relative;
+    left: 2%;
+  }
+  .workplace-info{
+    position: relative;
+    right: -4%;
+    top: 25px;
+    display: block;
+    width: 90%
+  }
+  .workplace-info h2{
+    font-size: calc(1vw + 1.1rem);
+  }
+  .workplace-info p{
+    font-size: calc(1vw + 0.7rem);
+  }
+}
+
+.inventions {
+  background-color: #05668D;
+}
+
+p.description {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5vw;
+}
+
+.inventions h2 {
+  text-align: center;
+  padding: 20px;
+  font-size: 3vw;
+  text-decoration: underline ;
+}
+
+span.world {
+
+  color: #FFC857;
+
+}
+
+span.national {
+  color: #C6EBBE;
+}
+
+p.inventions-list {
+  padding: 12px;
+  font-size: 1.6vw;
+  text-align: left;
+  position: relative;
+  left: 2%;
+}
+
+
+@media only screen and (max-width: 673px) {
+  p.inventions-list {
+    font-size: calc(1vw + 0.85rem);
+  }
+  .inventions h2 {
+    font-size: calc(1vw + 1.6rem);
+  }
+  p.description {
+    font-size: calc(1vw + 0.8rem);
+  }
+}
+
+.resume {
+  background-color: #20003D;
+}
+
+.resume h2 {
+  padding: 20px;
+  font-size: 1.3vw;
+  text-align: left;
+  position: relative;
+  left: 25%;
+}
+
+
+
+.resume-btn {
+  display: inline-block;
+  width: 45%;
+}
+
+.resume-btn a{
+  font-family: 'Roboto Slab', serif;
+  position: relative;
+  left: 70%;
+  display: inline-block;
+  padding: 25px 30px;
+  margin: 40px 0;
+  color:  #7CBFCB;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  margin-right: 50px;
+ 
+}
+.resume-btn a:hover{
+  background:  #7CBFCB;
+  color: white;
+  box-shadow: 0 0 5px  #7CBFCB,
+              0 0 25px  #7CBFCB,
+              0 0 50px  #7CBFCB,
+              0 0 200px  #7CBFCB;
+   -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+.resume-btn a:nth-child(1){
+  filter: hue-rotate(270deg);
+}
+.resume-btn a:nth-child(2){
+  filter: hue-rotate(110deg);
+}
+.resume-btn a span{
+  position: absolute;
+  display: block;
+}
+.resume-btn a span:nth-child(1){
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent, #7CBFCB);
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+  0%{
+      left: -100%;
+  }
+  50%,100%{
+      left: 100%;
+  }
+}
+.resume-btn a span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent, #7CBFCB);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2{
+  0%{
+      top: -100%;
+  }
+  50%,100%{
+      top: 100%;
+  }
+}
+.resume-btn a span:nth-child(3){
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent, #7CBFCB);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.50s;
+}
+@keyframes animate3{
+  0%{
+      right: -100%;
+  }
+  50%,100%{
+      right: 100%;
+  }
+}
+a span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent, #7CBFCB);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4{
+  0%{
+      bottom: -100%;
+  }
+  50%,100%{
+      bottom: 100%;
+  }
+}
+
+.resume-btn2 {
+  width: 45%;
+  display: inline-block;
+}
+.resume-btn2 a{
+  font-family: 'Roboto Slab', serif;
+  position: relative;
+  left: 30%;
+  display: inline-block;
+  padding: 25px 30px;
+  margin: 40px 0;
+  color:  #7CBFCB;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: 0.5s;
+  letter-spacing: 4px;
+  overflow: hidden;
+  margin-right: 50px;
+ 
+}
+.resume-btn2 a:hover{
+  background:  #7CBFCB;
+  color: white;
+  box-shadow: 0 0 5px  #7CBFCB,
+              0 0 25px  #7CBFCB,
+              0 0 50px  #7CBFCB,
+              0 0 200px  #7CBFCB;
+   -webkit-box-reflect:below 1px linear-gradient(transparent, #0005);
+}
+.resume-btn2 a:nth-child(1){
+  filter: hue-rotate(270deg);
+}
+.resume-btn2 a:nth-child(2){
+  filter: hue-rotate(110deg);
+}
+.resume-btn2 a span{
+  position: absolute;
+  display: block;
+}
+.resume-btn2 a span:nth-child(1){
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,transparent, #7CBFCB);
+  animation: animate1 1s linear infinite;
+}
+@keyframes animate1{
+  0%{
+      left: -100%;
+  }
+  50%,100%{
+      left: 100%;
+  }
+}
+.resume-btn2 a span:nth-child(2){
+  top: -100%;
+  right: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(180deg,transparent, #7CBFCB);
+  animation: animate2 1s linear infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2{
+  0%{
+      top: -100%;
+  }
+  50%,100%{
+      top: 100%;
+  }
+}
+.resume-btn2 a span:nth-child(3){
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(270deg,transparent, #7CBFCB);
+  animation: animate3 1s linear infinite;
+  animation-delay: 0.50s;
+}
+@keyframes animate3{
+  0%{
+      right: -100%;
+  }
+  50%,100%{
+      right: 100%;
+  }
+}
+
+
+a span:nth-child(4){
+  bottom: -100%;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  background: linear-gradient(360deg,transparent, #7CBFCB);
+  animation: animate4 1s linear infinite;
+  animation-delay: 0.75s;
+}
+@keyframes animate4{
+  0%{
+      bottom: -100%;
+  }
+  50%,100%{
+      bottom: 100%;
+  }
+}
+
+@media only screen and (max-width: 673px) {
+  .resume-btn, .resume-btn2 {
+    display: block;
+    width: 95%;
+  }
+  .resume-btn {
+    position: relative;
+    right: 37%;
+  }
+  .resume-btn2 {
+    position: relative;
+    right: 4%;
+  }
+
+}
+
+footer {
+  background-color: #08090C;
+}
+
+footer h4 {
+  text-align: center;
+  padding: 25px;
+  font-size: 18px;
+  vertical-align: center;
+}
+
+footer a {
+  color: #08b2e3;
+}
+
+
+.reveal{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
